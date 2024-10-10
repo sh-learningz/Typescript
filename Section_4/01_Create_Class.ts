@@ -1,14 +1,14 @@
 class Account {
-    readonly id: number;
-    owner: string;
-    private _balance: number;
-    nickname?: string;
+    // readonly id: number;
+    // owner: string;
+    // private _balance: number;
+    // nickname?: string;
 
-    constructor(id: number, owner: string, balance: number) {
-        this.id = id;
-        this.owner = owner;
-        this._balance = balance;
-    }
+    constructor(
+        public readonly id: number,
+        public owner: string,
+        private _balance: number
+    ) {}
 
     deposit(amount: number): void {
         if (amount <= 0) {
@@ -19,7 +19,7 @@ class Account {
     }
 
     private calculateTax() {
-        
+
     }
 
     getBalance(): number {
