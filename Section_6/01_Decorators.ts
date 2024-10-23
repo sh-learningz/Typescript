@@ -7,6 +7,7 @@ function Component(constractor: Function) {
     };
 }
 
+@Component
 class ProfileComponent {
 
 }
