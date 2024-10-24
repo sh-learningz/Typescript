@@ -15,7 +15,14 @@ function Component(options: componentOptions) {
     }
 }
 
-@Component
+// like f(g(x))
+function Pipe(constructor: Function) {
+    console.log('Pipe decorator call');
+    constructor.prototype.pipe = true;
+}
+
+@Component({selector: '#my-profile'})
+@Pipe
 class ProfileCommponent {
 
 }
